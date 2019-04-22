@@ -4,9 +4,9 @@ Start a build in Jenkins using a Slack Command
 
 ## Features
 - Start a build
-  - `/jenkins MyAwesomeApp`
+  - `/jenkins buildName`
 - Start a parameterized build
-  - `/jenkins MyAwesomeApp param1=value1 param2=value2`
+  - `/jenkins buildName param1=value1 param2=value2`
   
 ## In Progress
 - Error handling when staring the build fails
