@@ -54,20 +54,3 @@ Start a build in Jenkins using a Slack Command
 /jenkins MyAwesomeApp
 ```
 
-## FAQ
-
-### How do I access my Jenkins server from behind a router?
-I used [ngrok.com](https://ngrok.com/) with basic authentication to expose my Jenkins server
-
-### Can I integrate with `fastlane` and call different lanes?
-You can! Make a parameterized build with a name called `lane` (or whatever you want to call it). Make this a string or choice parameter with all your build lanes available as choices (beta, inhouse, app_store). Then use this `$lane` in your build shell command in your job's configuration - `bundle exec fasltane $lane`.
-
-To call this from Slack, all you need to do is send `/jenkins MyAwesomeApp lane=beta`.
-
-## Author
-
-Josh Holtz, me@joshholtz.com, [@joshdholtz](https://twitter.com/joshdholtz)
-
-## License
-
-jenkins-slack-command is available under the MIT license. See the LICENSE file for more info.
