@@ -1,15 +1,6 @@
-# jenkins-slack-command
-
-[![Twitter: @KauseFx](https://img.shields.io/badge/contact-@joshdholtz-blue.svg?style=flat)](https://twitter.com/joshdholtz)
-[![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/joshdholtz/exportation/blob/master/LICENSE)
+# JenkinsSlack
 
 Start a build in Jenkins using a Slack Command
-
-**Slack Command**
-![](screenshots/command.png)
-
-**Incoming Webhook**
-![](screenshots/incoming_webhook.png)
 
 ## Features
 - Start a build
@@ -28,10 +19,9 @@ Start a build in Jenkins using a Slack Command
   - Name command `/jenkins`
   - Set the URL to the url of your Heroku instance (created in [step 3](#3-spin-up-heroku-instance))
   - Method should be POST
-  - Label should be 'Jenkins' or whatevs
-- Create a new "Inbound Webhook" (Optional)
+- Create a new "Inbound Webhook"
   - Set the channel you would like to post to
-  - Set the bot name `Jenkins` or whatevs
+  - Set the bot name `Anything That You Like`
 
 ### 2. Setup environment variables on your Heroku instance
 
@@ -41,16 +31,17 @@ Start a build in Jenkins using a Slack Command
    - NOTE: if your jenkins requires authentication url will look like `http://user:auth-token@your-jenkins-host:port`. To obtain user authentication token click your name on the top right corner on every page, then click "Configure" to see your API token. (The URL `$host/me/configure` is a good shortcut.), 
  - `JENKINS_TOKEN` - API token for jenkins job. 
    - NOTE: you will need to enable remote builds for every job you would like to invoke remotely. Turn on "Trigger builds remotely (e.g., from scripts)" checkbox under `Bild Triggers` section in job configuration. Then input any random token and save. You will need to use the same token for all jobs you are planning to build from slack remotely, otherwise jenkins will fail with authentication error.
-- Optional environment variables
-  - `SLACK_WEBHOOK_URL` - your incoming webhook URL
+- `SLACK_WEBHOOK_URL` - your incoming webhook URL
   
 ### 3. Spin up Heroku instance
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/joshdholtz/jenkins-slack-command)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/tonythomas28/JenkinsSlack)
   
+- Or You can even deploy it in you local, but Make sure the Above said environment variables is set
+
 ### 4. Execute command in Slack
 
 ```
-/jenkins MyAwesomeApp
+/jenkins <buildName>
 ```
 
