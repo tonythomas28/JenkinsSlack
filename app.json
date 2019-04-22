@@ -1,8 +1,8 @@
 {
-  "name": "Jenkins Slack Command Examples",
-  "description": "An instance for Jenkins Slack Command for starting builds",
+  "name": "Jenkins Slack Integration App",
+  "description": "An instance for Jenkins Slack Command to run Normal and Parametrised Builds",
   "repository": "https://github.com/tonythomas28/JenkinsSlack",
-  "keywords": ["jenkins", "slack", "command", "awesome"],
+  "keywords": ["jenkins", "slack", "command"],
   "env": {
     "SLACK_TOKEN": {
       "description": "Token from your 'Slash Command'",
