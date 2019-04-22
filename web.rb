@@ -4,7 +4,7 @@ require 'json'
 require 'slack-notifier'
 
 get '/' do
-  "This is a thing"
+  "Wassup People - Developed by Tony Thomas"
 end
 
 post '/' do
