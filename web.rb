@@ -47,11 +47,12 @@ post '/' do
 
   # Build url
   build_url = "#{jenkins_job_url}/#{next_build_number}"
+  jenkins_mini_url = "#{jenkins_short_url}/#{next_build_number}"
 
   slack_webhook_url = ENV['SLACK_WEBHOOK_URL']
   if slack_webhook_url
     notifier = Slack::Notifier.new slack_webhook_url
-    notifier.ping "Started job '#{job}' - #{build_url}"
+    notifier.ping "Started job '#{job}' - #{jenkins_mini_url}"
   end
 
   build_url
